@@ -550,8 +550,9 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
         String aux;
         aux=cajaTexto.getText();
-        cajaTexto.setText( aux.substring(0, cadena.length()-1) )
-        
+        if(aux.length()>0)
+        cajaTexto.setText( aux.substring(0, aux.length()-1) );
+        else
         
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(true);

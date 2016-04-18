@@ -7,8 +7,6 @@ package calculadoraampli;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,7 +20,6 @@ public class Interfaz extends javax.swing.JFrame {
      */
     public Interfaz() {
         initComponents();
-        setLocationRelativeTo(null);
     }
 
     /**
@@ -60,7 +57,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         cajaTexto.setEditable(false);
 
-        jButtonC.setText("CE");
+        jButtonC.setText("C");
         jButtonC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCActionPerformed(evt);
@@ -163,7 +160,7 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        jButtonBorrar.setText("C");
+        jButtonBorrar.setText("<x");
         jButtonBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBorrarActionPerformed(evt);
@@ -304,8 +301,11 @@ public class Interfaz extends javax.swing.JFrame {
 
     int parentAbiertos=0;
     int parentCerrados=0;
-    List listaOp=new ArrayList();
+    int reusltado=0;
+    List listaOp=new <Character>ArrayList();
+    
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
+       
         cajaTexto.setText(cajaTexto.getText()+0);
         jButtonComa.setEnabled(true);
         //jButtonAbreP.setEnabled(true);
@@ -318,7 +318,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton0ActionPerformed
 
     private void jButtonComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComaActionPerformed
-        cajaTexto.setText(cajaTexto.getText()+".");
+        cajaTexto.setText(cajaTexto.getText()+",");
         jButtonComa.setEnabled(false);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(false);
@@ -331,6 +331,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultActionPerformed
         cajaTexto.setText(cajaTexto.getText()+"*");
+        
          jButton1.setEnabled(true);
         jButton2.setEnabled(true);
         jButton3.setEnabled(true);
@@ -353,6 +354,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivActionPerformed
         cajaTexto.setText(cajaTexto.getText()+"/");
+       
          jButton1.setEnabled(true);
         jButton2.setEnabled(true);
         jButton3.setEnabled(true);
@@ -375,6 +377,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         cajaTexto.setText(cajaTexto.getText()+1);
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
@@ -390,6 +393,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+2);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -403,6 +407,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+3);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -416,6 +421,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButtonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+"+");
+        
          jButton1.setEnabled(true);
         jButton2.setEnabled(true);
         jButton3.setEnabled(true);
@@ -439,6 +445,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+6);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -452,6 +459,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+5);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -465,6 +473,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+4);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -477,6 +486,8 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosActionPerformed
         // TODO add your handling code here:
+        
+        
          jButton1.setEnabled(true);
         jButton2.setEnabled(true);
         jButton3.setEnabled(true);
@@ -527,6 +538,7 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
          parentAbiertos++;
         cajaTexto.setText(cajaTexto.getText()+"(");
+        
         jButtonComa.setEnabled(false);
         //jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(false);
@@ -549,11 +561,9 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCActionPerformed
         // TODO add your handling code here:
-        String aux;
-        aux=cajaTexto.getText();
-        if(aux.length()>0)
-        cajaTexto.setText( aux.substring(0, aux.length()-1) );
-        else
+        
+        cajaTexto.setText(cajaTexto.getText().substring(0, cajaTexto.getText().length()-1)); 
+        
         
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(true);
@@ -577,6 +587,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarActionPerformed
         cajaTexto.setText("");
+        listaOp.clear();
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(true);
         jButtonCierraP.setEnabled(true);
@@ -590,6 +601,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+7);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -603,6 +615,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+8);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -616,6 +629,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         cajaTexto.setText(cajaTexto.getText()+9);
+        
         jButtonComa.setEnabled(true);
         jButtonAbreP.setEnabled(false);
         jButtonCierraP.setEnabled(true);
@@ -625,23 +639,245 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonMult.setEnabled(true);
         jButtonIgual.setEnabled(true);
     }//GEN-LAST:event_jButton9ActionPerformed
+    private static boolean isNumeric(Object num,Object num2){
+        if(!num.equals('*')&&!num.equals('/')&&!num.equals('+')&&!num.equals('-')&&!num.equals('(')&&!num.equals(')')
+                &&!num2.equals('*')&&!num2.equals('/')&&!num2.equals('+')&&!num2.equals('-')&&!num2.equals('(')&&!num2.equals(')')){
+            return true;
+        }else return false;
+        
+    }
+    public void llenalista(){
+        String numero="";
+        
+        for (int x=0;x<cajaTexto.getText().length();x++){
+            
+            if(cajaTexto.getText().charAt(x)=='('||cajaTexto.getText().charAt(x)==')'||cajaTexto.getText().charAt(x)=='+'||cajaTexto.getText().charAt(x)=='-'||cajaTexto.getText().charAt(x)=='*' 
+                    ||cajaTexto.getText().charAt(x)=='/'){ 
+                listaOp.add(cajaTexto.getText().charAt(x));
+            }else{
+                 int z=x;
+                for(z=z ;z<cajaTexto.getText().length();z++){                   
+                    if(!Character.isDigit(cajaTexto.getText().charAt(z)))
+                    {
+                        break;
+                    }else{  
+                        x=z;
+                        numero+=cajaTexto.getText().charAt(z);                    
+                    }
+                }
+               
+                listaOp.add(Integer.parseInt(numero));
+                 numero="";
+               
+            }
+            
+        }
+        for (int y=0;y<listaOp.size();y++){
+            if (listaOp.get(y).equals('(')){
+                if (listaOp.get(y+1).equals('-')&&listaOp.get(y+3).equals(')')){
+                    int negativo=0;
+                    negativo=Integer.parseInt(listaOp.get(y+2).toString())-2*Integer.parseInt( listaOp.get(y+2).toString());
+                    listaOp.set(y, negativo);
+                    listaOp.remove(y+1);
+                    listaOp.remove(y+1);
+                    listaOp.remove(y+1);
+                    y=listaOp.size();
+                }
+            }
+        }
 
+    }
     private void jButtonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIgualActionPerformed
         // TODO add your handling code here:
+        
+      int  total=0;
+   listaOp.clear();
+       // for(int i =0;i<listaOp.size();i++){
+         //   System.out.println(listaOp.get(i));
+        //}
+        
+        llenalista();
         if(parentAbiertos!=parentCerrados){
             JOptionPane.showOptionDialog(this, "LOS PARENTESIS NO ESTAN BIEN.\n   VUELVA A INTENTARLO", "ERROR", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "},"Aceptar");
           cajaTexto.setText("");
+          listaOp.clear();
         }else{
-            Expresion expresion = new Expresion(cajaTexto.getText());
-            try {
-                cajaTexto.setText(String.valueOf(expresion.compile()));
-                // cajaTexto.setText(String.valueOf(result));
-            } catch (Exception ex) {
-                Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            cajaTexto.setText(String.valueOf(resuelveParentesis(listaOp)));
+            
+            
+                    
+                   /* posaux1=i+1;                    
+                    for(int a=i;a>=0;a--){
+                        System.out.println("`pruebaaa  "+ listaOp.get(a));
+                        
+                        if(listaOp.get(a).equals("(")){
+                            posaux2=a;
+                            for(int b=a;b<=posaux1;b++){
+                               listaOp.remove(b);
+                                if(listaOp.get(b).equals(")")){
+                                    for(int x =0;x<listaOp.size();x++){
+                                        System.out.print(listaOp.get(x));
+                                    }
+                                }
+                            }
+                        }                        
+                    }*/
+                
+            
         }
+        
     }//GEN-LAST:event_jButtonIgualActionPerformed
 
+    public void resuelvePorEntre(){
+      int resultado=0;
+      for(int i =0;i<listaOp.size();i++){ 
+        if(listaOp.get(i).equals(')')){       
+        
+        for(int j =i;j>=0;j--){
+            if(listaOp.get(j).equals('(')){
+                
+                for(int k=j;k<=listaOp.size();k++){
+                  if(listaOp.get(k).equals('+')||listaOp.get(k).equals('-')){
+                
+                    if(listaOp.get(k-2).equals('(')&&listaOp.get(k+2).equals(')')){
+                       if( listaOp.get(k).equals('+')){
+                        resultado = Integer.parseInt(listaOp.get(k-1).toString())+Integer.parseInt(listaOp.get(k+1).toString());
+                       }else if( listaOp.get(k).equals('-')){
+                           resultado = Integer.parseInt(listaOp.get(k-1).toString())-Integer.parseInt(listaOp.get(k+1).toString());
+                       }                            
+                                listaOp.set(k-2, resultado);
+                                resultado=0;
+                                listaOp.remove(k-1);
+                                listaOp.remove(k-1);
+                                listaOp.remove(k-1);
+                                listaOp.remove(k-1);
+                                i=k-2;
+                                break;
+                                
+                                //=listaOp.size();
+                            }else if(isNumeric(listaOp.get(k-1), listaOp.get(k+1))){
+                                if( listaOp.get(k).equals('+')){
+                                    resultado=0;
+                                    resultado = Integer.parseInt(listaOp.get(k-1).toString())+Integer.parseInt(listaOp.get(k+1).toString());
+                                }else if( listaOp.get(k).equals('-')){
+                                    resultado=0;
+                                    resultado = Integer.parseInt(listaOp.get(k-1).toString())-Integer.parseInt(listaOp.get(k+1).toString());
+                                }   
+                                
+                                listaOp.set(k-1, resultado);
+                                resultado=0;
+                                listaOp.remove(k);
+                                listaOp.remove(k);
+                                //finlista=listaOp.size();
+                                k=j;
+                                
+                            }
+                }  
+                
+                }
+                
+                
+                i=0;
+                break;           
+            
+            }else if(listaOp.get(j).equals('*')||listaOp.get(j).equals('/')){
+                
+                    if(listaOp.get(j-2).equals('(')&&listaOp.get(j+2).equals(')')){
+                       if( listaOp.get(j).equals('*')){
+                        resultado = Integer.parseInt(listaOp.get(j-1).toString())*Integer.parseInt(listaOp.get(j+1).toString());
+                       }else if( listaOp.get(j).equals('/')){
+                           resultado = Integer.parseInt(listaOp.get(j-1).toString())/Integer.parseInt(listaOp.get(j+1).toString());
+                       }                            
+                                listaOp.set(j-2, resultado);
+                                resultado=0;
+                                listaOp.remove(j-1);
+                                listaOp.remove(j-1);
+                                listaOp.remove(j-1);
+                                listaOp.remove(j-1);
+                                i=j-2;
+                                break;
+                                
+                                //=listaOp.size();
+                            }else if(isNumeric(listaOp.get(j-1), listaOp.get(j+1))){
+                                if( listaOp.get(j).equals('*')){
+                                    resultado = Integer.parseInt(listaOp.get(j-1).toString())*Integer.parseInt(listaOp.get(j+1).toString());
+                                }else if( listaOp.get(j).equals('/')){
+                                    resultado = Integer.parseInt(listaOp.get(j-1).toString())/Integer.parseInt(listaOp.get(j+1).toString());
+                                }   
+                                
+                                listaOp.set(j-1, resultado);
+                                resultado=0;
+                                listaOp.remove(j);
+                                listaOp.remove(j);
+                                //finlista=listaOp.size();
+                                j=j-1;
+                                
+                            }
+                }
+                
+        }
+            }
+        }
+      
+                    
+    }
+    
+    public int resuelveParentesis(List<Object> lista){
+    int posaux2;
+    int total=0, result=0;
+    int finlista=listaOp.size();
+    resuelvePorEntre();
+    
+   for(int i =0;i<listaOp.size();i++){
+       if( listaOp.get(i).equals('*')||listaOp.get(i).equals('/')){
+            if(isNumeric(listaOp.get(i-1), listaOp.get(i+1))){
+                if( listaOp.get(i).equals('*')){
+                    result = Integer.parseInt(listaOp.get(i-1).toString())*Integer.parseInt(listaOp.get(i+1).toString());
+                    total = Integer.parseInt(listaOp.get(i-1).toString())*Integer.parseInt(listaOp.get(i+1).toString());
+                
+                }else if( listaOp.get(i).equals('/')){
+                    result = Integer.parseInt(listaOp.get(i-1).toString())/Integer.parseInt(listaOp.get(i+1).toString());
+                    total = Integer.parseInt(listaOp.get(i-1).toString())/Integer.parseInt(listaOp.get(i+1).toString());                
+                } 
+                listaOp.set(i-1, result);
+                result=0;
+                listaOp.remove(i);
+                listaOp.remove(i);
+                             //finlista=listaOp.size();
+                i=i-1;
+                                
+                }
+   
+       }
+   }
+   for(int i =0;i<listaOp.size();i++){
+       if( listaOp.get(i).equals('+')||listaOp.get(i).equals('-')){
+            if(isNumeric(listaOp.get(i-1), listaOp.get(i+1))){
+                if( listaOp.get(i).equals('+')){
+                    result = Integer.parseInt(listaOp.get(i-1).toString())+Integer.parseInt(listaOp.get(i+1).toString());
+                    total = Integer.parseInt(listaOp.get(i-1).toString())+Integer.parseInt(listaOp.get(i+1).toString());
+                
+                }else if( listaOp.get(i).equals('-')){
+                    result = Integer.parseInt(listaOp.get(i-1).toString())-Integer.parseInt(listaOp.get(i+1).toString());
+                    total = Integer.parseInt(listaOp.get(i-1).toString())-Integer.parseInt(listaOp.get(i+1).toString());                
+                } 
+                listaOp.set(i-1, result);
+                result=0;
+                listaOp.remove(i);
+                listaOp.remove(i);
+                             //finlista=listaOp.size();
+                i=i-1;
+                                
+                }
+   
+       }
+   }
+   
+   
+   
+   
+   return total;
+}
     /**
      * @param args the command line arguments
      */
